@@ -1,0 +1,6 @@
+addons:
+  ssh_known_hosts: canastas.info
+before_install:
+  - bash deploy/install.sh
+after_success:
+  - bash deploy/deploy.sh
