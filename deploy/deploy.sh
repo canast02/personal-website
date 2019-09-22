@@ -2,7 +2,7 @@
 set -x # Show the output of the following commands (useful for debugging)
 
 if [ $TRAVIS_BRANCH == 'master' ] ; then
-    cd _site
+    ls -lah
 
     # Remove unnecessary files.
     rm deploy-key.enc
