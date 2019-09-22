@@ -1,6 +1,6 @@
 language: php
 php:
-  - '7.0'
+  - 7.5
 addons:
   ssh_known_hosts: canastas.info
 before_install:
