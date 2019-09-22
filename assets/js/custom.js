@@ -27,6 +27,7 @@ function renderPublications(elem) {
     })
     .done(function (data) {
         elem.html(data);
+        bibtext();
     })
     .fail(function (err) {
         elem.html('<span style="color: red;">Unable to load publications.</span>')

@@ -21,19 +21,18 @@
 //
 //
 
-jQuery(document).ready(function(){
-
-    var $container	 	= $('#publication-list');
-    var $filter 		= $('#publication-filter');
+function bibtext() {
+    const $container = $('#publication-list');
+    const $filter = $('#publication-filter');
 
     $container.isotope({
         filter				: '*',
-        layoutMode			: 'straightDown',
+        layoutMode			: 'vertical',
         animationEngine 	: 'css',
     });
 
     $filter.find('a').click(function(){
-        var selector = $(this).attr('data-filter');
+        const selector = $(this).attr('data-filter');
         $container.isotope({
             filter				: selector,
             animationEngine 	: 'css'
@@ -49,17 +48,19 @@ jQuery(document).ready(function(){
     /* ---------------------------------------------------------------------- */
     /*	Fancybox
     /* ---------------------------------------------------------------------- */
-    $container.find('a').fancybox({
-        'transitionIn'		:	'elastic',
-        'transitionOut'		:	'elastic',
-        'speedIn'			:	200,
-        'speedOut'			:	200,
-        'scrolling'			:	'no',
-        'overlayOpacity'	:   0.6
+    $container.find('a.fancybox-link').fancybox({
+        transitionIn: 'elastic',
+        transitionOut: 'elastic',
+        speedIn: 200,
+        speedOut: 200,
+        scrolling: 'no',
+        overlayOpacity: 0.6,
+        defaultType: 'text',
+        touch: false,
     });
     $(".publications-title").unbind('click.fb');
     $(".series-link").unbind('click.fb');
     $(".publications-ppt").unbind('click.fb');
     $(".publications-pdf").unbind('click.fb');
     $(".publications-website").unbind('click.fb');
-});
+}

@@ -83,8 +83,8 @@ $delimiter = '.';
  Bellow each type enter the title which will be presented as the category title.
 */
 
-$sortby = array('journal', 'conference', 'book', 'editorial', 'theses', 'gconferences');
-$sortbyTitle = array('Journals and Magazines', 'Conference Proceedings', 'Book Chapters', 'Editorials', 'Theses', 'Greek Conferences');
+$sortby = array('journal', 'conference', 'book', 'editorial', 'workshop', 'theses', 'gconferences');
+$sortbyTitle = array('Journals and Magazines', 'Conference Proceedings', 'Book Chapters', 'Editorials', 'Workshop Papers', 'Theses', 'Greek Conferences');
 
 $projects = array('all');
 

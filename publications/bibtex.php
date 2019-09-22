@@ -429,8 +429,8 @@ class BibTeX_Parser
             }
         }
         if (isset($this->sortedItems['raw'][$element])) {
-            $this->resultedHtml .= '&nbsp;<a href="#bibtex-' . $element . '" title="Bibtex Citation" id="publink-' . $element . '"><i class="fa fa-bold">&nbsp;</i></a>';
-            $this->resultedHtml .= '<div style="display:none"><div id="bibtex-' . $element . '"><pre>' . $this->sortedItems['raw'][$element] . '</pre></div></div>';
+            $this->resultedHtml .= '&nbsp;<a class="fancybox-link" data-fancybox data-src="#bibtex-' . $element . '"  href="#bibtex-' . $element . '" title="Bibtex Citation" id="publink-' . $element . '"><i class="fa fa-bold">&nbsp;</i></a>';
+            $this->resultedHtml .= '<div style="display:none" id="bibtex-' . $element . '"><pre class="bibtext">' . $this->sortedItems['raw'][$element] . '</pre></div>';
             //$this->resultedHtml .= '<a class="publications-title" href="#bibtex-'.$element.'" class="fa fa-book" title="BibTex" id="publink-'.$element.'" href="#" title="BibTex Reference"></a>&nbsp;';
         }
         if (isset($this->sortedItems['durl'][$element])) {
@@ -466,7 +466,7 @@ class BibTeX_Parser
         echo '<ul id="publication-filter">';
 
         echo '<li><a href="#" class="btn btn-sm btn-success current" data-filter="*">All</a></li>';
-        echo '<li><a href="#" class="btn btn-xs btn-danger current" data-filter=".award.">Awards</a></li>';
+//        echo '<li><a href="#" class="btn btn-xs btn-danger current" data-filter=".award.">Awards</a></li>';
         //      for($i = 0; $i < count($this->awardData); $i++) {
         //       echo $this->awardData[$i]."<br>";
         //    }
