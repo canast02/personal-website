@@ -2,12 +2,10 @@
 set -x # Show the output of the following commands (useful for debugging)
 
 if [ $TRAVIS_BRANCH == 'master' ] ; then
-    ls -lah
-
     # Remove unnecessary files.
-    rm deploy-key.enc
-    rm README.md
-    rm -rf deploy
+    git rm deploy-key.enc
+    git rm README.md
+    git rm -rf deploy
 
     # Initialize a new git repo in _site, and push it to our server.
     git init
