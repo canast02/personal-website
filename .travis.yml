@@ -1,6 +1,4 @@
-language: php
-php:
-  - 7.5
+language: generic
 addons:
   ssh_known_hosts: canastas.info
 before_install:
