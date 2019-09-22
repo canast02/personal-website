@@ -3,11 +3,10 @@ set -x # Show the output of the following commands (useful for debugging)
 
 if [ $TRAVIS_BRANCH == 'master' ] ; then
     # Remove unnecessary files.
-    git rm deploy-key.enc
-    git rm README.md
-    git rm -rf deploy
+    git rm -rf deploy-key.enc deploy README.md
+    git commit -m "removed unnecessary"
 
-    # Initialize a new git repo in _site, and push it to our server.
+    # Initialize a new git repo, and push it to our server.
     git init
     git remote add deploy "deploy@canastas.info:/var/www/canastas.info"
     git config user.name "Travis CI"
