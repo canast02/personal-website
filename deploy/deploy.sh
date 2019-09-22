@@ -10,6 +10,11 @@ if [ $TRAVIS_BRANCH == 'master' ] ; then
     git config user.name "Travis CI"
     git config user.email "chrysovalantis.anastasiou+travisci@gmail.com"
 
+    # Remove unnecessary files.
+    rm deploy-key.enc
+    rm README.md
+    rm -rf deploy
+
     git add .
     git commit -m "Deploy"
     git push --force deploy master
